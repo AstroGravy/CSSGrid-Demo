@@ -1,0 +1,115 @@
+:root { /* how to make variables in css */
+        --mural-1: #D93D86;
+        --mural-2: #03738C;
+        --mural-3: #6AC4D9;
+        --mural-4: #03A688;
+        --mural-5: #F2C12E;
+    }
+
+
+.grid-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: auto auto auto; /* auto auto auto is 3 columns */
+    padding: 10px;
+    background-color: rgb(60, 60, 60);
+}
+
+.grid-item {
+    background-color: lightblue;
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+}
+
+.side-content {
+    grid-row: 3 / span 3;
+    grid-column: 3;
+    background-color: maroon;
+    place-content: center;
+}
+
+.main-content {
+    grid-row: 3;
+    grid-column: 1 / span 2;
+}
+
+.bottom-content {
+    grid-row: 5;
+    grid-column: 1 / 3; /* from edge 1 to 3, spanning 2; same as 1 / span 2*/
+}
+
+.image-content {
+    grid-row: 2;
+    grid-column: 1 / 4;
+}
+
+
+/* nav stuff */
+.nav-menu {
+    grid-row: 1;
+    grid-column: 1 / span 3; /* spans all the columns or whole row */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu .nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-menu .nav li {
+    margin-right: 20px;
+}
+
+
+.horiz-nav {
+    background-color: var(--mural-2);
+    }
+    .horiz-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    }
+    .horiz-nav li {
+    margin-right: 25px;
+    }
+    .horiz-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+    background-color: var(--mural-2);
+    }
+    /* Hover effect */
+    .horiz-nav a:hover {
+    background-color: var(--mural-3);
+    }
+    /* Active (current page) link */
+    .horiz-nav a.active {
+    background-color: var(--mural-4);  /* a green highlight */
+    font-weight: bold;          /* make it stand out */
+    }
+    .horiz-nav a.active:hover {
+        color: black;
+    }
+    .horiz-nav a.active:hover ~ a {
+        color: black;
+    }
+    .horiz-nav .active:hover + .hide { /*this shows hide*/
+        visibility: visible;
+        
+    }
+    .hide {/* this is hidden*/
+        visibility: hidden;
+        position: absolute;
+        display: block;
+        top: 0;
+        transform: translate(0, 54px);
+    }
+    .hide:hover { /*keeps hide visible when you hover over it*/
+        visibility: visible;
+    }

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Grid</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        
+        .g-container {
+            
+            display: grid;
+            grid-template-columns: 250px 250px 250px 250px;
+            grid-auto-rows: 250px;
+            grid-gap: 25px;
+            padding: 10px;
+            background-color: white;
+            row-gap: 75px;
+        }
+        .g-item {
+            background-color: #606060;
+            padding: 20px;
+            border-bottom: 5px solid #EB5533;
+            border-top: 2px solid #ACB7D5;
+            color: #ACB7D5;
+
+            
+        }
+        .g-item img {
+            height: 200px;
+        }
+        .g-item p {
+            position: relative;
+            text-align: right;
+            font-size: 15px;
+            top: 17.5%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+
+        <div class="grid-item nav-menu horiz-nav"> <!---nav stuff-->
+            <ul class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="advanced.html" class="active">Advanced</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="g-container">
+        <div class="g-item"><img src="images/gan m 11 pro image.jpg"><p>Lorem Ipsum</p></div>
+        <div class="g-item"><img src="images/gan m 11 pro image.jpg"><p>Lorem Ipsum</p></div>
+        <div class="g-item"><img src="images/gan m 11 pro image.jpg"><p>Lorem Ipsum</p></div>
+        <div class="g-item"><img src="images/gan m 11 pro image.jpg"><p>Lorem Ipsum</p></div>
+        <div class="g-item"><img src="images/gan m 11 pro image.jpg"><p>Lorem Ipsum</p></div>
+        <div class="g-item"><img src="images/gan m 11 pro image.jpg"><p>Lorem Ipsum</p></div>
+        <div class="g-item"><img src="images/gan m 11 pro image.jpg"><p>Lorem Ipsum</p></div>
+        <div class="g-item"><img src="images/gan m 11 pro image.jpg"><p>Lorem Ipsum</p></div>
+
+    </div>
+    
+</body>
+</html>
