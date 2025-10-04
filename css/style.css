@@ -113,3 +113,14 @@
     .hide:hover { /*keeps hide visible when you hover over it*/
         visibility: visible;
     }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: var(--mural-5);
+    color: var(--mural-1);
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+}
